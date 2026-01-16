@@ -33,8 +33,6 @@ const Logo: React.FC<LogoProps> = ({ className = "w-full h-full" }) => {
         <filter id="premiumShadow" x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow dx="0" dy="4" stdDeviation="3" floodOpacity="0.3" />
         </filter>
-
-        {/* مسار للنص المنحني إذا لزم الأمر، لكن سنستخدم التنسيق اليدوي للتحكم الأفضل */}
       </defs>
 
       <g filter="url(#premiumShadow)">
@@ -57,31 +55,14 @@ const Logo: React.FC<LogoProps> = ({ className = "w-full h-full" }) => {
           fill="none" 
         />
         
-        {/* كلمة "فطاطرى" بتنسيق علوي أنيق */}
-        <rect x="65" y="45" width="70" height="20" rx="10" fill="url(#metalGold)" opacity="0.1" />
-        <text 
-          x="100" 
-          y="62" 
-          textAnchor="middle" 
-          fill="url(#metalGold)"
-          style={{ 
-            fontSize: '22px', 
-            fontWeight: '800', 
-            fontFamily: 'Cairo, sans-serif',
-            letterSpacing: '1px'
-          }}
-        >
-          فطاطرى
-        </text>
-
-        {/* كلمة "أطياب" المركزية الضخمة */}
+        {/* كلمة "أطياب" المركزية - تم تصغير الحجم لمظهر أكثر توازناً */}
         <text 
           x="100" 
           y="125" 
           textAnchor="middle" 
           fill="url(#metalGold)"
           style={{ 
-            fontSize: '72px', 
+            fontSize: '68px', 
             fontWeight: '900', 
             fontFamily: 'Cairo, sans-serif',
             filter: 'drop-shadow(0px 2px 2px rgba(0,0,0,0.2))'
@@ -90,27 +71,11 @@ const Logo: React.FC<LogoProps> = ({ className = "w-full h-full" }) => {
           أطياب
         </text>
 
-        {/* خطوط زخرفية جانبية */}
-        <path d="M45 100 H60" stroke="url(#metalGold)" strokeWidth="3" strokeLinecap="round" />
-        <path d="M140 100 H155" stroke="url(#metalGold)" strokeWidth="3" strokeLinecap="round" />
+        {/* خطوط زخرفية جانبية متناسقة */}
+        <path d="M45 100 H60" stroke="url(#metalGold)" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
+        <path d="M140 100 H155" stroke="url(#metalGold)" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
         
-        {/* جملة سفلية صغيرة (تأسس بشغف أو الطعم الأصلي) */}
-        <text 
-          x="100" 
-          y="155" 
-          textAnchor="middle" 
-          fill="url(#metalGold)"
-          style={{ 
-            fontSize: '12px', 
-            fontWeight: 'bold', 
-            fontFamily: 'Cairo, sans-serif',
-            opacity: 0.8
-          }}
-        >
-          الطعم له أصول
-        </text>
-
-        {/* لمعة سريعة فوق التصميم */}
+        {/* لمعة سريعة فوق التصميم لزيادة الفخامة */}
         <rect 
           x="30" 
           y="30" 
