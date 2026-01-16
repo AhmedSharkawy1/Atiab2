@@ -29,12 +29,12 @@ const AdditionsCard = ({ data }: { data: any }) => (
       </div>
     </div>
 
-    <div className="bg-gradient-to-br from-yellow-100 via-white to-yellow-50 dark:from-yellow-950/20 dark:via-zinc-900 dark:to-yellow-900/10 rounded-[2.5rem] p-8 md:p-10 border-2 border-yellow-600/30 shadow-[0_20px_50px_rgba(234,179,8,0.1)] overflow-hidden relative">
+    <div className="bg-gradient-to-br from-yellow-100 via-white to-yellow-50 dark:from-yellow-950/20 dark:via-zinc-900 dark:to-yellow-900/10 rounded-[2.5rem] p-6 md:p-8 border-2 border-yellow-600/30 shadow-[0_20px_50px_rgba(234,179,8,0.1)] overflow-hidden relative">
       <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-500"></div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
         {data.items.map((add: any, idx: number) => (
-          <div key={idx} className="flex justify-between items-center bg-white dark:bg-zinc-950/80 backdrop-blur-sm p-4 rounded-3xl border border-yellow-100 dark:border-white/5 shadow-md group hover:border-yellow-600 transition-all duration-300 hover:-translate-y-1">
+          <div key={idx} className="flex justify-between items-center bg-white dark:bg-zinc-950/80 backdrop-blur-sm p-3 rounded-3xl border border-yellow-100 dark:border-white/5 shadow-md group hover:border-yellow-600 transition-all duration-300 hover:-translate-y-1">
             <div className="flex flex-col">
               <span className="font-black text-sm text-zinc-800 dark:text-zinc-200 group-hover:text-yellow-600 transition-colors">{add.name}</span>
             </div>
@@ -42,7 +42,7 @@ const AdditionsCard = ({ data }: { data: any }) => (
               {add.prices.map((p: string, pIdx: number) => (
                 <div key={pIdx} className="flex flex-col items-center">
                   {add.labels && add.labels[pIdx] && <span className="text-[9px] font-black text-zinc-400 mb-1">{add.labels[pIdx]}</span>}
-                  <div className="bg-yellow-600 text-black px-4 py-2 rounded-2xl font-black tabular-nums text-sm shadow-lg shadow-yellow-600/30 min-w-[50px] text-center">
+                  <div className="bg-yellow-600 text-black px-3 py-1.5 rounded-2xl font-black tabular-nums text-sm shadow-lg shadow-yellow-600/30 min-w-[45px] text-center">
                     {p} <span className="text-[9px]">ج</span>
                   </div>
                 </div>

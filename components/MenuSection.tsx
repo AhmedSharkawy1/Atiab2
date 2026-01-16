@@ -38,7 +38,7 @@ const MenuSection: React.FC<Props> = ({ section, isFirst, onInteraction }) => {
       {/* Items Container */}
       <div className="bg-white dark:bg-zinc-900/60 backdrop-blur-xl rounded-[2.5rem] p-6 md:p-10 border border-zinc-200 dark:border-white/10 shadow-xl reveal-item">
         {section.subtitles && !section.items.some(item => item.labels) && (
-          <div className="flex justify-end mb-6 border-b border-zinc-100 dark:border-white/5 pb-4">
+          <div className="flex justify-end mb-4 border-b border-zinc-100 dark:border-white/5 pb-4">
              <div className="flex gap-12 pl-6" aria-hidden="true">
                 {section.subtitles.map((sub, idx) => (
                     <span key={idx} className="text-zinc-400 dark:text-zinc-600 text-[11px] font-black tracking-widest uppercase">{sub}</span>
@@ -55,11 +55,11 @@ const MenuSection: React.FC<Props> = ({ section, isFirst, onInteraction }) => {
               <div 
                 key={idx} 
                 onClick={onInteraction}
-                className="py-6 flex items-center justify-between gap-4 group transition-all duration-300 ease-out hover:bg-yellow-50/30 dark:hover:bg-yellow-900/5 -mx-4 px-4 rounded-3xl border border-transparent hover:border-yellow-100 dark:hover:border-yellow-900/10 active:scale-[0.98]"
+                className="py-3 flex items-center justify-between gap-4 group transition-all duration-300 ease-out hover:bg-yellow-50/30 dark:hover:bg-yellow-900/5 -mx-4 px-4 rounded-3xl border border-transparent hover:border-yellow-100 dark:hover:border-yellow-900/10 active:scale-[0.98]"
                 role="listitem"
                 aria-label={itemDescription}
               >
-                <div className="flex flex-col gap-2 max-w-[50%]">
+                <div className="flex flex-col gap-1 max-w-[50%]">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-zinc-900 dark:text-zinc-100 font-black text-base leading-snug group-hover:text-yellow-600 transition-colors duration-300">
                       {item.name}
@@ -83,14 +83,14 @@ const MenuSection: React.FC<Props> = ({ section, isFirst, onInteraction }) => {
                     const isCall = price.includes("اتصل");
                     
                     return (
-                      <div key={pIdx} className="flex flex-col items-center gap-1.5">
+                      <div key={pIdx} className="flex flex-col items-center gap-1">
                         {item.labels && item.labels[pIdx] && (
                           <span className="text-[10px] font-black text-zinc-400 dark:text-zinc-600 uppercase tracking-tighter">
                             {item.labels[pIdx]}
                           </span>
                         )}
                         <div className={`
-                          ${isTxt ? 'px-4 py-2 min-w-[90px]' : 'px-4 py-2.5 min-w-[60px]'} 
+                          ${isTxt ? 'px-3 py-1.5 min-w-[80px]' : 'px-3 py-2 min-w-[55px]'} 
                           bg-zinc-100 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-800 
                           rounded-2xl border border-zinc-200 dark:border-white/5 group-hover:border-yellow-500/40 
                           shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-lg 
@@ -98,19 +98,19 @@ const MenuSection: React.FC<Props> = ({ section, isFirst, onInteraction }) => {
                         `}>
                             {isTxt ? (
                               <div className="flex flex-col items-center">
-                                <div className="flex items-center gap-1.5">
-                                  {isCall && <span className="text-[16px] animate-pulse">📞</span>}
-                                  <span className={`text-yellow-600 font-black leading-tight text-center ${price.length > 15 ? 'text-[9px]' : 'text-[11px]'}`}>
+                                <div className="flex items-center gap-1">
+                                  {isCall && <span className="text-[14px] animate-pulse">📞</span>}
+                                  <span className={`text-yellow-600 font-black leading-tight text-center ${price.length > 15 ? 'text-[8px]' : 'text-[10px]'}`}>
                                       {price}
                                   </span>
                                 </div>
                               </div>
                             ) : (
                               <>
-                                <span className="text-yellow-600 font-black text-xl leading-none">
+                                <span className="text-yellow-600 font-black text-lg leading-none">
                                     {price}
                                 </span>
-                                <span className="text-[10px] text-zinc-500 dark:text-zinc-500 mr-1 font-black">ج</span>
+                                <span className="text-[9px] text-zinc-500 dark:text-zinc-500 mr-0.5 font-black">ج</span>
                               </>
                             )}
                         </div>
