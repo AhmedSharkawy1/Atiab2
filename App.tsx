@@ -167,7 +167,8 @@ const App: React.FC = () => {
     }
   };
 
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(currentUrl)}&bgcolor=ffffff&color=eab308`;
+  // Set the QR code color to black (#000000) instead of yellow (#eab308)
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(currentUrl)}&bgcolor=ffffff&color=000000`;
   const mapsLink = "https://www.google.com/maps/search/R7XC+FC7+برج+أنس+الوجود،+مدينة+البدراشين،+مركز+البدرشين،+محافظة+الجيزة+3367401";
 
   return (
